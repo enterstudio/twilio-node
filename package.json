@@ -20,18 +20,22 @@
     "request": "2.74.x",
     "scmp": "0.0.3",
     "string.prototype.startswith": "^0.2.0",
-    "underscore": "1.x"
+    "underscore": "1.x",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "express": "3.x",
     "jasmine-node": "2.0.0"
   },
   "scripts": {
-    "test": "jasmine-node --captureExceptions spec"
+    "test": "jasmine-node --captureExceptions spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "./lib",
   "engines": {
     "node": ">=0.8.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
